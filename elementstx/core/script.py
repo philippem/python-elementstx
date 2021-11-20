@@ -133,7 +133,7 @@ def RawElementsSignatureHash(
         # amount is not used in SIGVERSION_BASE sighash,
         # so we specify invalid value.
         return RawBitcoinSignatureHash(script, txTo, inIdx, hashtype,
-                                       amount=-1, sigversion=sigversion)
+                                       amount=0, sigversion=sigversion)
 
     ensure_isinstance(amount, elementstx.core.CConfidentialValue, 'amount')
     assert isinstance(amount, elementstx.core.CConfidentialValue)
