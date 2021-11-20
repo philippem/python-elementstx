@@ -51,6 +51,9 @@ Run configuration script for the library, specifying the experimental modules th
                                  --enable-module-surjectionproof \
                                  --enable-module-ecdh \
                                  --enable-module-recovery
+                                 --enable-module-extrakeys \
+                                 --enable-module_schnorrsig \
+                                 --enable-module_musig
 
 Build the library
 
@@ -63,7 +66,11 @@ Back to our home directory
 
 The actual dynamic library file will be called `libsecp256k1.so`, and may conflict with system-installed secp256k1 library. To avoid this, we will not install the library into the system. To work with our examples, it is enough to set `LD_LIBRARY_PATH` to the path where the linker can find this version of the library. We can do so with the command:
 
-    ~/$ export LD_LIBRARY_PATH=$HOME/secp256k1-zkp/.libs/ 
+    ~/$ export LD_LIBRARY_PATH=$HOME/secp256k1-zkp/.libs/
+
+On macOS, you will need to set `DYLD_LIBRARY_PATH`:
+
+    ~/$ export DYLD_LIBRARY_PATH=$HOME/secp256k1-zkp/.libs/
 
 Now, the programs that are executed in the current shell session will use our newly built secp256k1-zkp library.
 
