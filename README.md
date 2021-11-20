@@ -15,7 +15,10 @@ It builds on top, and is intended to be used along with python-bitcointx library
                 --enable-module-rangeproof \
                 --enable-module-surjectionproof \
                 --enable-module-ecdh \
-                --enable-module-recovery
+                --enable-module-recovery \
+                --enable-module-extrakeys \
+                --enable-module_schnorrsig \
+                --enable-module_musig
 ```
 
 ## Usage:

@@ -72,6 +72,9 @@ On macOS, you will need to set `DYLD_LIBRARY_PATH`:
 
     ~/$ export DYLD_LIBRARY_PATH=$HOME/secp256k1-zkp/.libs/
 
+You will also need to set
+    ~/$ export PYTHON_BITCOINTX_ALLOW_LIBSECP256K1_EXPERIMENTAL_MODULES_USE=1
+    
 Now, the programs that are executed in the current shell session will use our newly built secp256k1-zkp library.
 
 # Unblinding example
